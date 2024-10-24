@@ -1,0 +1,25 @@
+<app-sidebar></app-sidebar>
+
+<p-card header="Carrera">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga voluptatibus quaerat eius aut, fugit ea, incidunt cupiditate quo eveniet assumenda porro? Provident ut itaque minima in dolore magnam animi aut?</p> 
+</p-card>
+<p-card header="Lista de Carreras">
+    <p-table [value]="carreras" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Quantity</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-carrera>
+            <tr>
+                <td>{{ carrera.code }}</td>
+                <td>{{ carrera.name }}</td>
+                <td>{{ carrera.category }}</td>
+                <td>{{ carrera.quantity }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</p-card>

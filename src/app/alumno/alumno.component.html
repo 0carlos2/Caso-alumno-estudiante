@@ -1,0 +1,26 @@
+<app-sidebar></app-sidebar>
+
+<p-card header="Alumno">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, aliquid, officiis laboriosam vel odio hic debitis at suscipit veritatis doloremque accusamus amet, voluptatem labore cupiditate excepturi illo architecto molestias voluptate?</p>
+</p-card>
+
+<p-card header="Lista de Alumnos">
+    <p-table [value]="alumnos" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Quantity</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-alumno>
+            <tr>
+                <td>{{ alumno.code }}</td>
+                <td>{{ alumno.name }}</td>
+                <td>{{ alumno.category }}</td>
+                <td>{{ alumno.quantity }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</p-card>
